@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+<p> Status: <br />  <%= f.check_box :status%> </p>
+<p> Address1:<br />  <%= f.text_field :address1%> </p>
+<p> Address2:<br />  <%= f.text_field :address2%> </p>
+  <p> City:<br />  <%= f.text_field :city%> </p>
+  <p> State:<br />  <%= f.text_field :state%> </p>
+  <p> Zipcode:<br />  <%= f.number_field :zipcode%></p>
+  <%= f.submit %>
+<% end %>
