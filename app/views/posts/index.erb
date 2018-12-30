@@ -1,0 +1,10 @@
+<h1>Parking Spot Post </h1>
+
+<% @posts.each do |post| %>
+<%= post.zipcode %>
+<%end %>
+
+
+
+<%= button_to "New Parking Spot", new_post_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>

@@ -10,19 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_201556) do
+ActiveRecord::Schema.define(version: 2018_12_30_023431) do
 
   create_table "parkingspots", force: :cascade do |t|
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.integer "zipcode"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "address1"
     t.string "address2"
     t.string "city"
-    t.string "zipcode"
+    t.integer "zipcode"
     t.string "state"
     t.string "car_type"
     t.integer "user_id"

@@ -1,0 +1,14 @@
+<div class ="Post_Form">
+  <h1>New Parking Spot </h1>
+
+  <%= form_for @post do |f| %>
+<p> Address1:<br />  <%= f.text_field :address1%> </p>
+<p> Address2:<br />  <%= f.text_field :address2%> </p>
+  <p> City:<br />  <%= f.text_field :city%> </p>
+  <p> State:<br />  <%= f.text_field :state%> </p>
+  <p> Zipcode:<br />  <%= f.number_field :zipcode%></p>
+  <p> Type of Car: <br />  <%= f.select :car_type, options_for_select(["SUV", "Sedan", "Smart Car"]) %> </p>
+
+    <%= f.submit %>
+<% end %>
+  </div>
