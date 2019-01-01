@@ -2,6 +2,6 @@ class Post < ApplicationRecord
   belongs_to :parkingspot
   belongs_to :user
 
-
+  #accepts_nested_attributes_for :parkingspot
 
 end

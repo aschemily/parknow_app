@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.parkingspot.build
   end
 
   def create
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:address1, :address2, :city, :zipcode, :state, :car_type, :user_id, :parkingspot_id)
+    params.require(:post).permit(:address1, :address2, :city, :zipcode, :state, :car_type, :user_id, parkingspot_attrubutes: [:status])
   end
 
 

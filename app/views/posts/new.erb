@@ -9,6 +9,10 @@
   <p> Zipcode:<br />  <%= f.number_field :zipcode%></p>
   <p> Type of Car: <br />  <%= f.select :car_type, options_for_select(["SUV", "Sedan", "Smart Car"]) %> </p>
 
+<%= f.fields_for :parkingspot do |spot|  %>
+<%= spot.label :status %>
+<%= spot.check_box :status %>
+<% end %>
     <%= f.submit %>
 <% end %>
   </div>
