@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get '/', to: 'static#index'
   resources :users
   resources :posts
-  resources :parkingspots 
+  resources :parkingspots
+
   #
   # resources :users do
   #   resources :posts, only: [:new, :create]
